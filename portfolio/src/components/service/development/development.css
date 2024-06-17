@@ -1,0 +1,209 @@
+.our-service-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-service-header {
+  padding-top: 15vh;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.our-service-header h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.our-service-header p {
+  font-size: 1.2rem;
+  color: #969696;
+}
+
+.app-develop,
+.web-develop {
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.app-develop-content {
+  flex: 1;
+  padding: 20px;
+  margin: 0;
+}
+
+.web-develop-content {
+  flex: 1;
+  padding: 20px;
+  margin: 100px;
+}
+.app-develop-content h4,
+.web-develop-content h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.app-develop-content ul,
+.web-develop-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.app-develop-content ul li,
+.web-develop-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.app-develop-content p,
+.web-develop-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.app-develop-content a,
+.web-develop-content a {
+  display: inline-block;
+  margin-top: 10px;
+  /* padding: 10px 20px; */
+  background-color: transparent;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.app-develop-content a:hover,
+.web-develop-content a:hover {
+  text-decoration: underline;
+}
+
+.app-develop-content ul li:before,
+.web-develop-content ul li:before {
+  content: "✔";
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.app-develop-image-container,
+.web-develop-image-container {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+.app-develop-image-container .static1 {
+  position: absolute;
+  bottom: -18%;
+  left: -5%;
+}
+.app-develop-image-container .static2,
+.web-develop-image-container .static {
+  position: absolute;
+  bottom: -18%;
+  right: -5%;
+  max-height: 400px;
+}
+.app-develop-image-container .static3 {
+  position: absolute;
+  top: -25%;
+  right: -30%;
+  height: 600px;
+  z-index: -1;
+  filter: grayscale(80%);
+}
+.app-develop-image-container .motion,
+.web-develop-image-container .motion {
+  position: absolute;
+  height: 500px;
+  animation: motion1 3s alternate-reverse infinite;
+  z-index: -1;
+}
+
+@keyframes motion1 {
+  0% {
+    top: -10%;
+    right: -20%;
+  }
+  100% {
+    top: -5%;
+    right: -20%;
+  }
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+  margin-right: 170px;
+  margin-left: 30px;
+  z-index: -2;
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  transform: rotate(-90deg);
+  float: left;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background-image: radial-gradient(
+    circle 696px at 47.6% 152.3%,
+    rgba(255, 255, 255, 0.579) 0%,
+    rgba(41, 97, 171, 0.3) 90%
+  );
+  background-size: cover;
+  background-color: #bfbbb7;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.web-develop-image-container .static {
+  position: absolute;
+  bottom: -18%;
+  right: -5%;
+  max-height: 400px;
+}
+
+.web-develop-image-container .motion {
+  position: absolute;
+  height: 500px;
+  animation: motion2 3s alternate-reverse infinite;
+  z-index: -1;
+  filter: grayscale(100%);
+}
+
+@keyframes motion2 {
+  0% {
+    top: 5%;
+    right: -20%;
+  }
+  100% {
+    top: 10%;
+    right: -20%;
+  }
+}

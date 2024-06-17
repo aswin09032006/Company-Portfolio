@@ -1,0 +1,50 @@
+.footer-container {
+  overflow-x: hidden;
+}
+.footer-content-container {
+  display: flex;
+  align-items: self-start;
+  color: #fff;
+  width: 96vw;
+  justify-content: space-around;
+  background: hwb(0 0% 100% / 0.744);
+  padding: 30px;
+}
+
+.footer-content-header {
+  color: #fff;
+  font-size: 30px;
+}
+
+.footer-content-company,
+.footer-content-services,
+.footer-content-quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-content-company a,
+.footer-content-services a,
+.footer-content-quick-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-content-icons-container {
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.footer-content-icons-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  background: hwb(0 0% 100% / 0.744);
+  color: white;
+  padding: 10px;
+}

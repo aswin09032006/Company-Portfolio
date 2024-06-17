@@ -1,0 +1,399 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("C:/Users/vkasw/OneDrive/Desktop/poppins font/Poppins-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("C:/Users/vkasw/OneDrive/Desktop/poppins font/Poppins-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* The rest of your CSS */
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.home-page-container {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background: url("C:/Users/vkasw/OneDrive/Desktop/portfolio/portfolio/src/assets/bg.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  /* animation: fadeIn 8s forwards; */
+}
+
+.join-now {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.home-page-hero {
+  padding: 0px 20px;
+  position: relative;
+  z-index: 2;
+  height: 60vh;
+}
+
+.home-page-hero-text {
+  margin-top: 150px;
+}
+
+.home-page-hero-text p {
+  margin-bottom: 20px;
+}
+
+.home-page-hero-text h1 {
+  margin: 0;
+  font-size: 80px;
+  max-width: 60vw;
+  font-weight: 600;
+}
+
+.home-page-hero-text .design {
+  filter: blur(1px);
+  font-weight: 500;
+  font-size: 100px;
+  font-family: "Courgette", cursive;
+  transition: 0.5s all ease;
+  animation: designshadow 12s ease forwards;
+}
+
+@keyframes designshadow {
+  0% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  100% {
+    filter: drop-shadow(-11px 4px 5px #000000);
+  }
+}
+
+.home-page-hero-text .powwwer {
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+.home-page-hero-text .powwwer:hover {
+  color: #ff0;
+  letter-spacing: 3px;
+}
+
+.home-page-hero-sub-text {
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.explore-projects-container {
+  margin-top: 40px;
+}
+
+.explore-projects-button {
+  background-color: #ff0;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.book-call {
+  margin-top: 20px;
+}
+
+.book-call a {
+  text-decoration: underline;
+  color: #333;
+}
+
+.background-elements .rock-left,
+.background-elements .rock-right,
+.background-elements .hand {
+  position: absolute;
+}
+
+.background-elements .rock-left {
+  bottom: -100%;
+  left: -50%;
+  width: 800px;
+  height: auto;
+  z-index: 1;
+  transform: rotate(20deg);
+  animation: rockLeftAnimation 12s ease-in forwards;
+}
+
+.background-elements .rock-right {
+  bottom: -55%;
+  right: -25%;
+  width: 400px;
+  height: auto;
+  filter: blur(3px);
+  transform: rotate(-35deg);
+  animation: rockRightAnimation 12s ease-in forwards;
+}
+
+.background-elements .hand {
+  top: 15%;
+  right: -45%;
+  width: 550px;
+  height: auto;
+  z-index: 5;
+  transform: rotate(-35deg);
+  animation: handAnimation 12s ease-in forwards;
+}
+
+@keyframes rockLeftAnimation {
+  0% {
+    transform: translateX(-70%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(5%) rotate(27deg);
+  }
+}
+
+@keyframes rockRightAnimation {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-10%) rotate(-35deg);
+  }
+}
+
+@keyframes handAnimation {
+  0% {
+    transform: translateX(0%) rotate(-25deg);
+  }
+  100% {
+    transform: translateX(-10%) rotate(-15deg);
+  }
+}
+
+.circle-yellow {
+  position: absolute;
+  top: 15%;
+  left: -40%;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 0, 0.473);
+  filter: blur(50px);
+  border-radius: 50%; /* Ensure the circle shape */
+  z-index: 3; /* Ensure the circle is above other elements */
+}
+
+.circle-white {
+  position: absolute;
+  top: 38%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.76);
+  filter: blur(30px);
+  border-radius: 50%; /* Ensure the circle shape */
+  z-index: 2; /* Ensure the circle is above other elements */
+  animation: whiteCircle 10s ease-in forwards;
+}
+
+@keyframes whiteCircle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  to {
+    background-color: transparent;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.something-about-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1000px;
+  background: rgba(255, 255, 255, 0.27);
+  backdrop-filter: blur(5px);
+  margin-top: 500px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 100px;
+  border-radius: 30px;
+}
+
+.something-about-us-container h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  max-width: 12vw;
+  color: #333;
+}
+
+.something-about-us-content {
+  max-width: 800px;
+  justify-content: left;
+  text-align: left;
+  width: 60%;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.something-about-us-content p {
+  margin-bottom: 20px;
+}
+
+.what-we-do-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-we-do-header {
+  font-size: 40px;
+}
+
+.what-we-do-card-container {
+  display: flex;
+  margin-top: 40px;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.what-we-do-card {
+  width: 30vw;
+  background: #ffffffc1;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
+}
+
+.what-we-do-card-icon {
+  font-size: 2.5rem;
+  background: white;
+  padding: 5px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.what-we-do-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  word-spacing: 5px;
+}
+
+.what-we-do-card-know-more {
+  border: none;
+  height: 30px;
+  width: 120px;
+  /* transition: all 0.5s ease; */
+}
+
+.what-we-do-card-know-more a {
+  background: #f2f2f2;
+  border: none;
+  height: 30px;
+  width: 120px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  color: #000;
+}
+
+.what-we-do-card-know-more:hover {
+  /* transform: translateY(-2px); */
+  letter-spacing: 2px;
+}
+
+.how-we-are-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 30px;
+  margin: 40px 0;
+  border-radius: 15px;
+  background: #d7d7d2;
+}
+
+.how-we-are-header {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+}
+
+.how-we-are-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-we-are-image {
+  width: 50%;
+  max-width: 500px;
+  margin-right: 150px;
+  filter: grayscale(30%);
+}
+
+.how-we-are-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 50%;
+  max-width: 500px;
+}
+
+.how-we-are-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.how-we-are-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.how-we-are-item p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333;
+}

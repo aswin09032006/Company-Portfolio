@@ -1,0 +1,17 @@
+/* ProgressBar.css */
+.progress-bar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  z-index: 9999;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #333;
+  width: 0%;
+  transition: width 0.2s ease-out;
+}

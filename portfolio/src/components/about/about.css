@@ -1,0 +1,165 @@
+.about-container {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7fc;
+  min-height: 100vh;
+}
+
+.learn-about-us-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 50px;
+  justify-content: space-between;
+  height: 30vh;
+  max-width: 80vw;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.learn-about-us-header {
+  font-size: 30px;
+  text-align: left;
+}
+
+.learn-about-us-content {
+  border-left-color: black;
+  border-left: 5px solid black;
+  padding-left: 20px;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.learn-about-us-support-container {
+  display: flex;
+  text-align: center;
+  width: 70vw;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+  background: white;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.support-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-content-title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.support-content-subtitle {
+  color: gray;
+}
+
+.team-members-container {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-members-title {
+  margin-bottom: 20px;
+}
+
+.team-member-image-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.tm-image-container {
+  position: relative;
+  width: 400px;
+  height: 250px;
+}
+
+.tm-image-container h3 {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+.tm-image-container p {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.team-member-image {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: grayscale(100%);
+}
+
+.tech-stacks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin-bottom: 50px;
+}
+
+.tech-stacks-title {
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tech-stacks-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card-container {
+  width: 256px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card-container:hover {
+  border: 1px solid rgb(204, 204, 204);
+  transform: scale(-1px);
+}
+
+.card-image {
+  width: 45px;
+  height: 45px;
+  object-fit: scale-down;
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: 17px;
+}

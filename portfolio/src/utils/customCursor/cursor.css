@@ -1,0 +1,48 @@
+/* CustomCursorTrail.css */
+
+.trail-element {
+  width: 5px; /* Adjust size as needed */
+  height: 5px;
+  border-radius: 50%; /* Adjust size as needed */
+  /* background-image: url("path/to/your/cursortrail.png"); */ /* Comment out the image */
+  background-color: yellow; /* Temporary color for debugging */
+  background-size: cover;
+  position: fixed; /* Ensure it follows the viewport */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000; /* Ensure this is higher than other elements */
+  opacity: 0.6;
+  transition: opacity 0.2s ease-out;
+}
+
+/* Opacity transition for trailing effect */
+.trail-element:nth-child(1) {
+  opacity: 1;
+}
+.trail-element:nth-child(2) {
+  opacity: 0.9;
+}
+.trail-element:nth-child(3) {
+  opacity: 0.8;
+}
+.trail-element:nth-child(4) {
+  opacity: 0.7;
+}
+.trail-element:nth-child(5) {
+  opacity: 0.6;
+}
+.trail-element:nth-child(6) {
+  opacity: 0.5;
+}
+.trail-element:nth-child(7) {
+  opacity: 0.4;
+}
+.trail-element:nth-child(8) {
+  opacity: 0.3;
+}
+.trail-element:nth-child(9) {
+  opacity: 0.2;
+}
+.trail-element:nth-child(10) {
+  opacity: 0.1;
+}
