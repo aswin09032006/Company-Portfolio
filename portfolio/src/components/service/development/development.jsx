@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./development.css";
 import woman from "../../../assets/app_dev/static1.svg";
 import plant from "../../../assets/app_dev/static2.svg";
@@ -9,6 +9,7 @@ import motionImage2 from "../../../assets/web_dev/motion.png";
 import { FaChevronRight } from "react-icons/fa6";
 
 const Development = () => {
+  const [is768, setIs768] = useState(window.innerWidth <= 768);
   return (
     <div className="our-service-container">
       <div className="our-service-header">
@@ -17,7 +18,7 @@ const Development = () => {
           We provide rich and Interactive experience by our Advanced Standards.
         </p>
       </div>
-      <div className="app-develop card">
+      <div className="app-develop-card">
         <div className="app-develop-image-container">
           <div className="box"></div>
           <img src={woman} alt="Woman" className="static1" />
@@ -65,7 +66,7 @@ const Development = () => {
         </div>
       </div>
 
-      <div className="web-develop card">
+      <div className="web-develop-card">
         <div className="web-develop-content">
           <h4>Web Development</h4>
           <ul>

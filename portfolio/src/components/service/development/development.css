@@ -23,8 +23,8 @@
   color: #969696;
 }
 
-.app-develop,
-.web-develop {
+.app-develop-card,
+.web-develop-card {
   max-width: 80vw;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
   position: absolute;
   bottom: -18%;
   right: -5%;
-  max-height: 400px;
+  height: 400px;
 }
 .app-develop-image-container .static3 {
   position: absolute;
@@ -186,7 +186,7 @@
   position: absolute;
   bottom: -18%;
   right: -5%;
-  max-height: 400px;
+  height: 400px;
 }
 
 .web-develop-image-container .motion {
@@ -205,5 +205,107 @@
   100% {
     top: 10%;
     right: -20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-service-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+  }
+
+  .app-develop-card,
+  .web-develop-card {
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .app-develop-content,
+  .web-develop-content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .app-develop-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .web-develop-content {
+    margin-top: 100px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .app-develop-image-container,
+  .web-develop-image-container {
+    width: 80%;
+    margin-top: 50px;
+    height: 500px;
+    width: 500px;
+  }
+
+  .web-develop-card {
+    flex-direction: column-reverse;
+  }
+
+  .app-develop-image-container .static1 {
+    bottom: -45%;
+    left: -10%;
+    height: 70vh;
+  }
+
+  .app-develop-image-container .static2 {
+    bottom: -45%;
+    right: -10%;
+    height: 70vh;
+  }
+  .app-develop-image-container .static3 {
+    top: -40%;
+    left: -40%;
+    height: 100vh;
+  }
+
+  .web-develop-image-container .static {
+    right: -20%;
+    height: 50vh;
+  }
+
+  .web-develop-image-container .motion {
+    top: 0;
+    right: 0;
+    height: 70vh;
+  }
+
+  .app-develop-image-container .box,
+  .web-develop-image-container .box {
+    bottom: 0%;
+    left: -15%;
+    height: 600px;
+    width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-service-header h3 {
+    font-size: 1.5em;
+  }
+
+  .our-service-header p {
+    font-size: 1em;
+  }
+
+  .app-develop-content h4,
+  .web-develop-content h4 {
+    font-size: 1.5em;
+  }
+
+  .quote-link {
+    font-size: 0.9em;
   }
 }
