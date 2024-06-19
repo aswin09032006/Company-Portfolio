@@ -7,6 +7,7 @@ import { PiPenNibLight } from "react-icons/pi";
 
 const Navbar = () => {
   const [progress, setProgress] = useState(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,11 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
+  };
+
   return (
     <div className="navbar-container">
       {/* Checkbox for sidebar toggle */}
@@ -70,56 +76,46 @@ const Navbar = () => {
         <div className="navbar-links">
           <a href="/">Home</a>
           <a href="/about">About</a>
-
-          {/* Dropdown menu */}
           <div className="dropdown">
-            <p className="dropdown-toggle">Services</p>
-            <div className="dropdown-content">
-              <p>
-                {" "}
-                <a
-                  href="/services/development"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                  }}
-                >
+            <p className="dropdown-toggle" onClick={toggleServices}>
+              Services
+            </p>
+            <div
+              className={`dropdown-content ${
+                servicesOpen ? "dropdown-open" : ""
+              }`}
+            >
+              <div className="nested-submenu">
+                <a href="/services/development" className="submenu-item">
                   <FaLaptopCode />
-                  Web/App Development
+                  Development
                 </a>
-              </p>
-              <p>
-                <a
-                  href="/services/graphic-designing"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                  }}
-                >
+              </div>
+              <div className="nested-submenu">
+                <a href="/services/graphic-designing" className="submenu-item">
                   <PiPenNibLight />
                   Graphic Designing
                 </a>
-              </p>
+              </div>
             </div>
           </div>
-
-          <a href="/portfolio">Portfolio</a>
+          <a
+            href="/portfolio"
+            className={`move-down ${servicesOpen ? "active" : ""}`}
+          >
+            Portfolio
+          </a>
           <a
             href="/contact"
-            style={{
-              display: "flex",
-              gap: "5px",
-              borderRadius: "20px",
-              width: "100px",
-              height: "25px",
-              border: "1px solid black",
-              marginLeft: "30px",
-            }}
+            className={`contact-button  ${servicesOpen ? "active" : ""}`}
           >
-            <IoCallOutline /> Contact
+            Contact
           </a>
+          <p
+            className={`contact-button-detail ${servicesOpen ? "active" : ""}`}
+          >
+            companyname@gmail.com
+          </p>
         </div>
       </div>
       <ProgressBar progress={progress} />

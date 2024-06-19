@@ -42,7 +42,7 @@
 .web-develop-content {
   flex: 1;
   padding: 20px;
-  margin: 100px;
+  margin: 100px 0;
 }
 .app-develop-content h4,
 .web-develop-content h4 {
@@ -208,14 +208,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .our-service-container {
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     justify-content: center;
+    overflow-x: hidden;
   }
-
   .app-develop-card,
   .web-develop-card {
     text-align: justify;
@@ -224,24 +223,76 @@
     flex-direction: column;
     padding-left: 0;
   }
-
-  .app-develop-content,
-  .web-develop-content {
-    width: 100%;
-    padding-left: 0;
-  }
-
   .app-develop-content {
-    margin-top: 100px;
     margin-bottom: 100px;
   }
 
   .web-develop-content {
-    margin-top: 100px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+  }
+  .app-develop-content ul li,
+  .web-develop-content ul li,
+  .app-develop-content p,
+  .web-develop-content p,
+  .app-develop-content a,
+  .web-develop-content a {
+    font-size: 20px;
+  }
+  .app-develop-image-container,
+  .web-develop-image-container {
+    width: 80%;
+    margin: 100px 0;
+    height: 500px;
+    width: 500px;
   }
 
+  .web-develop-card {
+    flex-direction: column-reverse;
+  }
+
+  .app-develop-image-container .static1 {
+    bottom: -55%;
+    left: -50%;
+    height: 70vh;
+  }
+
+  .app-develop-image-container .static2 {
+    bottom: -57%;
+    right: -30%;
+    height: 70vh;
+  }
+  .app-develop-image-container .static3 {
+    top: -40%;
+    left: -40%;
+    height: 70vh;
+  }
+
+  .app-develop-image-container .motion {
+    height: 50vh;
+  }
+
+  .web-develop-image-container .static {
+    right: -40%;
+    bottom: -30%;
+    height: 50vh;
+  }
+
+  .web-develop-image-container .motion {
+    position: absolute;
+    top: -10%;
+    left: -30%;
+    height: 60vh;
+  }
+
+  .app-develop-image-container .box,
+  .web-develop-image-container .box {
+    bottom: 0%;
+    left: -15%;
+    height: 600px;
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
   .app-develop-image-container,
   .web-develop-image-container {
     width: 80%;
@@ -256,19 +307,25 @@
 
   .app-develop-image-container .static1 {
     bottom: -45%;
-    left: -10%;
+    left: -20%;
     height: 70vh;
   }
 
   .app-develop-image-container .static2 {
     bottom: -45%;
-    right: -10%;
+    right: -20%;
     height: 70vh;
   }
   .app-develop-image-container .static3 {
     top: -40%;
     left: -40%;
     height: 100vh;
+  }
+
+  .app-develop-image-container .motion {
+    height: 70vh;
+    top: 0;
+    left: -10%;
   }
 
   .web-develop-image-container .static {
@@ -278,7 +335,7 @@
 
   .web-develop-image-container .motion {
     top: 0;
-    right: 0;
+    left: -20%;
     height: 70vh;
   }
 
@@ -291,21 +348,170 @@
   }
 }
 
+@media (max-width: 540px) {
+  .app-develop-image-container,
+  .web-develop-image-container {
+    width: 80%;
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+  }
+
+  .web-develop-card {
+    flex-direction: column-reverse;
+  }
+
+  .app-develop-image-container .static1 {
+    bottom: -35%;
+    left: -15%;
+    height: 75vh;
+  }
+
+  .app-develop-image-container .static2 {
+    bottom: -35%;
+    right: -10%;
+    height: 70vh;
+  }
+  .app-develop-image-container .static3 {
+    top: -15%;
+    left: -20%;
+    height: 80vh;
+  }
+
+  .app-develop-image-container .motion {
+    height: 70vh;
+  }
+
+  .web-develop-image-container .static {
+    right: -10%;
+    bottom: -10%;
+    height: 50vh;
+  }
+
+  .web-develop-image-container .motion {
+    bottom: 10%;
+    left: -15%;
+    height: 70vh;
+  }
+
+  .app-develop-image-container .box,
+  .web-develop-image-container .box {
+    bottom: 0%;
+    left: -10%;
+    height: 400px;
+    width: 400px;
+  }
+}
+
 @media (max-width: 480px) {
-  .our-service-header h3 {
-    font-size: 1.5em;
+  .app-develop-image-container,
+  .web-develop-image-container {
+    width: 80%;
+    margin-top: 50px;
+    height: 350px;
+    width: 350px;
   }
 
-  .our-service-header p {
-    font-size: 1em;
+  .web-develop-card {
+    flex-direction: column-reverse;
   }
 
-  .app-develop-content h4,
-  .web-develop-content h4 {
-    font-size: 1.5em;
+  .app-develop-image-container .static1 {
+    bottom: -35%;
+    left: -20%;
+    height: 50vh;
   }
 
-  .quote-link {
-    font-size: 0.9em;
+  .app-develop-image-container .static2 {
+    bottom: -40%;
+    right: -20%;
+    height: 55vh;
+  }
+  .app-develop-image-container .static3 {
+    top: -20%;
+    left: -30%;
+    height: 65vh;
+  }
+
+  .app-develop-image-container .motion {
+    height: 55vh;
+    top: -20%;
+    left: -15%;
+  }
+
+  .web-develop-image-container .static {
+    right: -10%;
+    bottom: -15%;
+    height: 40vh;
+  }
+
+  .web-develop-image-container .motion {
+    bottom: 10%;
+    left: -15%;
+    height: 50vh;
+  }
+
+  .app-develop-image-container .box,
+  .web-develop-image-container .box {
+    bottom: 0%;
+    left: -10%;
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 380px) {
+  .app-develop-image-container,
+  .web-develop-image-container {
+    width: 80%;
+    margin-top: 50px;
+    height: 300px;
+    width: 300px;
+  }
+
+  .web-develop-card {
+    flex-direction: column-reverse;
+  }
+
+  .app-develop-image-container .static1 {
+    bottom: -45%;
+    left: -15%;
+    height: 60vh;
+  }
+
+  .app-develop-image-container .static2 {
+    bottom: -45%;
+    right: -20%;
+    height: 60vh;
+  }
+  .app-develop-image-container .static3 {
+    top: -20%;
+    left: -25%;
+    height: 75vh;
+  }
+
+  .app-develop-image-container .motion {
+    height: 60vh;
+    bottom: 0%;
+    left: -15%;
+  }
+
+  .web-develop-image-container .static {
+    right: -10%;
+    bottom: -20%;
+    height: 45vh;
+  }
+
+  .web-develop-image-container .motion {
+    top: 10%;
+    left: -15%;
+    height: 45vh;
+  }
+
+  .app-develop-image-container .box,
+  .web-develop-image-container .box {
+    bottom: 0%;
+    left: -10%;
+    height: 300px;
+    width: 300px;
   }
 }

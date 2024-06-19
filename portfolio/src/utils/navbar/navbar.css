@@ -1,5 +1,4 @@
-/* navbar.css */
-
+/* Global styles */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Global styles */
@@ -80,6 +79,8 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 0 20px;
+  color: #5a5a5a;
 }
 
 .dropdown-content {
@@ -110,6 +111,19 @@ body {
   display: flex;
 }
 
+.nested-submenu .submenu-item {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-button {
+  display: none;
+}
+
+.contact-button-detail {
+  display: none;
+}
+
 /* Media query for responsive design */
 @media (max-width: 768px) {
   .navbar-links-container {
@@ -122,7 +136,7 @@ body {
     z-index: 10;
     width: 250px;
     height: 100vh;
-    background-color: #33333370;
+    background-color: #ffffffc7;
     backdrop-filter: blur(5px);
     box-shadow: 5px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.5s ease;
@@ -133,12 +147,21 @@ body {
 
   .navbar-links-container a {
     box-sizing: border-box;
-    color: white;
+    color: rgb(0, 0, 0);
     height: auto;
+    padding: 15px 30px;
     width: 100%;
-    padding: 20px 30px;
     justify-content: flex-start;
     text-align: left;
+  }
+
+  .dropdown {
+    padding: 0;
+  }
+
+  .dropdown-toggle {
+    padding: 20px 30px;
+    color: #000000;
   }
 
   .navbar-links {
@@ -157,7 +180,7 @@ body {
   .close-sidebar-button {
     padding: 20px;
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     align-items: end;
   }
@@ -189,9 +212,80 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 9;
   }
+
+  .dropdown-content {
+    padding: 0;
+    margin-left: 30px;
+    background-color: transparent;
+    display: none;
+  }
+
+  .dropdown-toggle {
+    color: rgb(0, 0, 0);
+  }
+
+  .submenu-item {
+    padding: 5px;
+  }
+
+  .nested-submenu:hover .nested-submenu-content {
+    display: flex;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:hover {
+    display: block;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .navbar-links a:nth-child(3),
+  .dropdown:hover .navbar-links a:nth-child(4) {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content .submenu-item {
+    padding: 10px 30px;
+    color: #000000;
+  }
+
+  .dropdown-content .submenu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown:hover ~ .move-down {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .contact-button {
+    position: fixed;
+    bottom: 5%;
+    left: -3%;
+  }
+
+  .contact-button-detail {
+    display: block;
+    position: fixed;
+    bottom: 4%;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-left: 30px;
+    left: -3%;
+  }
 }
 
-.dropdown-toggle {
-  color: #5a5a5a;
-  padding: 0 20px;
+/* Overlay style */
+#overlay {
+  display: none;
+}
+
+/* Add a new class for moving items down */
+.move-down {
+  display: none;
 }
