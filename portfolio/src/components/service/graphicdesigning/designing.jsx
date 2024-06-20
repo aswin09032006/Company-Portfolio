@@ -58,6 +58,7 @@ const Designing = () => {
               alignItems: "center",
               gap: "10px",
             }}
+            className="get-quote-button"
           >
             Get a quote <FaChevronRight />
           </a>
