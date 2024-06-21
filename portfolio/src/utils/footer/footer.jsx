@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-content-container">
         <div className="footer-content-header">
           <a href="/" style={{ textDecoration: "none", color: "white" }}>
-            CompanyName
+            WeAct Tech
           </a>
         </div>
         <div className="footer-content-company">
@@ -40,14 +40,14 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/weacttech/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:weacttech@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -66,7 +66,7 @@ const Footer = () => {
       <footer>
         &copy; {new Date().getFullYear()}{" "}
         <a href="/" style={{ color: "white", textDecoration: "none" }}>
-          [Company Name]
+          WeAct Tech
         </a>
         . All rights reserved.
       </footer>

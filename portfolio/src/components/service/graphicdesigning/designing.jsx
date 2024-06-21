@@ -52,13 +52,15 @@ const Designing = () => {
           </p>
           <p>Figma, Canva</p>
           <a
-            href="/get-quote"
+            href="mailto:weacttech@gmail.com"
+            className="quote-link"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
               gap: "10px",
             }}
-            className="quote-link"
           >
             Get a quote <FaChevronRight />
           </a>

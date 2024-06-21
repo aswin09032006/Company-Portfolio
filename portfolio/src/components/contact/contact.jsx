@@ -12,10 +12,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_twczy4i",
-        "template_zb2yx7p",
+        "service_j9vwz2b",
+        "template_7o092th",
         form.current,
-        "ZNZS8UZJXzL0JMoMf"
+        "hGd_XgUJw-nJSGHuj"
       )
       .then(
         () => {
@@ -59,7 +59,7 @@ const Contact = () => {
           <div className="contact-card">
             <i className="fas fa-envelope"></i>
             <h3>Email address</h3>
-            <p>company@gmail.com</p>
+            <p>weacttech@gmail.com</p>
           </div>
         </div>
       </div>

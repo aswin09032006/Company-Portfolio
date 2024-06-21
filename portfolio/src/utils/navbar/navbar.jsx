@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Logo and open sidebar button */}
       <h3 className="logo">
         <a href="/" style={{ textDecoration: "none", color: "black" }}>
-          Company name
+          WeAct Tech
         </a>
       </h3>
       <label htmlFor="sidebar-active" className="open-sidebar-button">
@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="navbar-links-header">
           {/* Company name in header */}
           <div className="company-name">
-            <a href="/">Company Name</a>
+            <a href="/">WeAct Tech</a>
           </div>
           {/* Close sidebar button */}
           <label htmlFor="sidebar-active" className="close-sidebar-button">
@@ -114,7 +114,7 @@ const Navbar = () => {
           <p
             className={`contact-button-detail ${servicesOpen ? "active" : ""}`}
           >
-            companyname@gmail.com
+            weacttech@gmail.com
           </p>
         </div>
       </div>

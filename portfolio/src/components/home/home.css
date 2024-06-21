@@ -30,13 +30,18 @@ body {
   text-align: center;
   position: relative;
   min-height: 100vh;
-  background: #f7f7fc;
+  /* background: #f7f7fc; */
+  background-image: linear-gradient(
+    357.2deg,
+    rgba(255, 255, 255, 1) 33.1%,
+    rgba(199, 199, 199, 1) 105.7%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  /* animation: fadeIn 8s forwards; */
+  animation: fadeIn 2s forwards;
 }
 
 .join-now {
@@ -64,7 +69,7 @@ body {
 .home-page-hero-text h1 {
   margin: 0;
   font-size: 80px;
-  max-width: 60vw;
+  width: 60vw;
   font-weight: 600;
 }
 
@@ -195,8 +200,8 @@ body {
   height: 300px;
   background-color: rgba(255, 255, 0, 0.473);
   filter: blur(50px);
-  border-radius: 50%; /* Ensure the circle shape */
-  z-index: 3; /* Ensure the circle is above other elements */
+  border-radius: 50%;
+  z-index: 3;
 }
 
 .circle-white {
@@ -207,8 +212,8 @@ body {
   height: 150px;
   background-color: rgba(255, 255, 255, 0.76);
   filter: blur(30px);
-  border-radius: 50%; /* Ensure the circle shape */
-  z-index: 2; /* Ensure the circle is above other elements */
+  border-radius: 50%;
+  z-index: 2;
   animation: whiteCircle 10s ease-in forwards;
 }
 
@@ -225,12 +230,10 @@ body {
   from {
     background-color: rgb(0, 0, 0);
     opacity: 0;
-    transform: scale(1.2);
   }
   to {
     background-color: transparent;
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -252,12 +255,12 @@ body {
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  max-width: 12vw;
+  width: 12vw;
   color: #333;
 }
 
 .something-about-us-content {
-  max-width: 800px;
+  width: 800px;
   justify-content: left;
   text-align: left;
   width: 60%;
@@ -319,7 +322,6 @@ body {
   border: none;
   height: 30px;
   width: 120px;
-  /* transition: all 0.5s ease; */
 }
 
 .what-we-do-card-know-more a {
@@ -334,7 +336,6 @@ body {
 }
 
 .what-we-do-card-know-more:hover {
-  /* transform: translateY(-2px); */
   letter-spacing: 2px;
 }
 
@@ -364,7 +365,7 @@ body {
 
 .how-we-are-image {
   width: 50%;
-  max-width: 500px;
+  width: 500px;
   margin-right: 150px;
   filter: grayscale(30%);
 }
@@ -374,8 +375,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  width: 50%;
-  max-width: 500px;
+  width: 40%;
 }
 
 .how-we-are-item {
@@ -394,4 +394,291 @@ body {
   font-size: 1.2em;
   font-weight: 500;
   color: #333;
+}
+
+@media (max-width: 1280px) {
+  .home-page-hero-text h1 .design {
+    font-size: 90px;
+    animation: none;
+    filter: none;
+  }
+  .background-elements .hand {
+    display: none;
+  }
+  .background-elements .circle-white {
+    display: none;
+  }
+  .something-about-us-container h1 {
+    width: 15vw;
+  }
+}
+@media (max-width: 1024px) {
+  .home-page-hero-text h1 {
+    width: 90vw;
+    font-size: 70px;
+  }
+  .home-page-hero-text h1 .design {
+    font-size: 90px;
+    animation: none;
+  }
+  .background-elements .hand {
+    display: none;
+  }
+  .background-elements .rock-left {
+    left: -30%;
+    bottom: -120%;
+    height: 70vh;
+    width: auto;
+  }
+  .background-elements .rock-right {
+    bottom: -85%;
+    right: -10%;
+    height: 40vh;
+    width: auto;
+  }
+  .something-about-us-container h1 {
+    width: 20vw;
+  }
+  .how-we-are-container {
+    border-radius: 0%;
+  }
+  .how-we-are-image {
+    height: 50vh;
+    width: auto;
+  }
+  .how-we-are-content {
+    margin-top: 30px;
+  }
+  .how-we-are-text {
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) and (min-height: 1200px) {
+  .home-page-hero-text h1 {
+    width: 90vw;
+    font-size: 70px;
+  }
+  .home-page-hero-text h1 .design {
+    font-size: 90px;
+    animation: none;
+  }
+  .background-elements .hand {
+    display: none;
+  }
+  .background-elements .rock-left {
+    left: -20%;
+    bottom: 0%;
+    height: 30vh;
+    width: auto;
+  }
+  .background-elements .rock-right {
+    bottom: 10%;
+    right: -10%;
+    height: 20vh;
+    width: auto;
+  }
+  .something-about-us-container {
+    margin-top: 50px;
+  }
+  .something-about-us-container h1 {
+    width: 20vw;
+  }
+  .how-we-are-container {
+    border-radius: 0%;
+    height: 40vh;
+    border-radius: 20px;
+  }
+  .how-we-are-image {
+    height: 400px;
+    width: auto;
+  }
+}
+@media (max-width: 912px) {
+  .background-elements .hand {
+    display: none;
+  }
+  .background-elements .rock-left {
+    left: -30%;
+    bottom: 0%;
+    height: 30vh;
+    width: auto;
+  }
+  .background-elements .rock-right {
+    bottom: 10%;
+    right: -10%;
+    height: 20vh;
+    width: auto;
+  }
+  .something-about-us-container {
+    margin-top: 50px;
+    width: 90vw;
+  }
+  .something-about-us-container h1 {
+    width: 25vw;
+  }
+  .what-we-do-container {
+    margin-top: 50px;
+  }
+  .how-we-are-container {
+    border-radius: 0%;
+    margin-bottom: 0;
+  }
+  .how-we-are-image {
+    height: 330px;
+  }
+}
+@media (max-width: 768px) {
+  .background-elements .rock-left {
+    bottom: -15%;
+    left: -10;
+  }
+  .background-elements .rock-right {
+    bottom: -5%;
+  }
+  .something-about-us-container {
+    margin-top: 150px;
+  }
+  .something-about-us-container h1 {
+    font-size: 30px;
+  }
+  .how-we-are-image {
+    height: 300px;
+  }
+  .how-we-are-item img {
+    height: 30px;
+    width: auto;
+  }
+  .how-we-are-item p {
+    font-size: 17px;
+  }
+  .how-we-are-text {
+    width: 60vw;
+  }
+}
+@media (max-width: 860px) {
+  .how-we-are-text {
+    width: 50vw;
+  }
+  .how-we-are-image {
+    height: 290px;
+    margin-right: 100px;
+  }
+}
+@media (max-width: 540px) {
+  .home-page-hero-text p {
+    font-size: 15px;
+    padding-top: 100px;
+    margin: 0;
+  }
+  .home-page-hero-text h1 {
+    font-size: 45px;
+  }
+  .home-page-hero-text h1 .design {
+    font-size: 60px;
+  }
+  .home-page-hero-sub-text {
+    font-size: 15px;
+    margin: 10px;
+  }
+  .background-elements .rock-left {
+    bottom: -90%;
+    left: -45%;
+    height: 40vh;
+  }
+  .background-elements .rock-right {
+    top: 30%;
+    right: 0;
+  }
+  .something-about-us-container {
+    margin-top: 60vh;
+    flex-direction: column;
+    width: 90vw;
+    margin-bottom: 0;
+  }
+  .something-about-us-container h1 {
+    width: 1000px;
+  }
+  .something-about-us-content {
+    width: 80vw;
+    text-align: justify;
+  }
+  .what-we-do-header {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .what-we-do-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .what-we-do-card {
+    width: 40vw;
+  }
+  .how-we-are-container {
+    width: 90vw;
+  }
+  .how-we-are-content {
+    width: 90vw;
+  }
+  .how-we-are-header {
+    font-size: 30px;
+  }
+  .how-we-are-image {
+    height: 200px;
+    margin: 10px;
+  }
+  .how-we-are-item p {
+    font-size: 13px;
+  }
+  .how-we-are-item img {
+    height: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .background-elements .rock-right {
+    top: 10%;
+    right: -20%;
+  }
+  .what-we-do-card {
+    width: 70vw;
+  }
+  .how-we-are-content {
+    flex-direction: column;
+  }
+  .how-we-are-text {
+    margin-bottom: 50px;
+  }
+  .how-we-are-image {
+    height: 300px;
+  }
+  .how-we-are-item {
+    width: 80vw;
+  }
+  .how-we-are-item img {
+    height: 30px;
+  }
+}
+@media (max-width: 380px) {
+  .home-page-hero-text {
+    margin-top: 100px;
+  }
+  .home-page-hero-text p {
+    font-size: 15px;
+  }
+  .home-page-hero-text h1 {
+    font-size: 35px;
+  }
+  .home-page-hero-text h1 .design {
+    font-size: 40px;
+  }
+  .home-page-hero-sub-text {
+    font-size: small;
+  }
+  .background-elements .rock-left {
+    left: -10%;
+  }
+  .background-elements .rock-right {
+    right: 0;
+  }
 }

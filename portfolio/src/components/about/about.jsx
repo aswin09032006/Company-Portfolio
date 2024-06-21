@@ -33,20 +33,20 @@ const About = () => {
       <div className="learn-about-us-container">
         <h1 className="learn-about-us-header">Learn About Us.</h1>
         <p className="learn-about-us-content">
-          [Company Name] is a rapidly growing IT company , dedicated to serving
+          WeAct Tech is a rapidly growing IT company , dedicated to serving
           clients locally and across India. Specializing in Software
           Development, and Website Design, we have become a trusted name in the
           local digital and web industry. Our services encompass a wide range of
           solutions including bespoke Software Products, Web Development, Mobile
           Apps, e-Commerce solutions, Domain & Web Hosting, Corporate Identity
           creation, Social Media Marketing, and Search Engine Optimization
-          (SEO). At [Company Name], we are committed to delivering top-notch
+          (SEO). At WeAct Tech, we are committed to delivering top-notch
           solutions tailored to meet the unique needs of businesses across the
           region. We're a team of dedicated experts who love creating new and
           exciting technology. Whether you're looking to establish a strong
           online presence, optimize business processes, or launch a new digital
           venture, we are here to partner with you every step of the way. Choose
-          [Company Name] for expert guidance and outstanding digital solutions
+          WeAct Tech for expert guidance and outstanding digital solutions
           designed to propel your business forward in the local market and
           beyond.
         </p>
@@ -71,19 +71,24 @@ const About = () => {
         </h1>
         <div className="team-member-image-container">
           <div className="tm-image-container">
-            <img src={tm1} alt="" className="team-member-image" />
+            <img src={""} alt="" className="team-member-image" />
             <h3>Aswin VK</h3>
             <p>Developer</p>
           </div>
           <div className="tm-image-container">
-            <img src={tm1} alt="" className="team-member-image" />
+            <img src={""} alt="" className="team-member-image" />
             <h3>Parthiban S</h3>
             <p>Developer</p>
           </div>
           <div className="tm-image-container">
-            <img src={tm1} alt="" className="team-member-image" />
+            <img src={""} alt="" className="team-member-image" />
             <h3>Aathini SS</h3>
             <p>UI/UX Designer</p>
+          </div>
+          <div className="tm-image-container">
+            <img src={""} alt="" className="team-member-image" />
+            <h3>Manoj Aarya TSR</h3>
+            <p>Graphic Designer</p>
           </div>
         </div>
       </div>

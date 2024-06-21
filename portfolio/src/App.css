@@ -1,4 +1,18 @@
-/* App.css
-body {
-  cursor: url("/cursor.png"), auto;
-} */
+.container {
+  text-align: center;
+  padding: 10px;
+}
+
+.status {
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message {
+  background-color: #ff9800; /* Orange */
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}

@@ -53,8 +53,10 @@ const Development = () => {
           </p>
           <p>Flutter, React Native</p>
           <a
-            href="/get-quote"
+            href="mailto:weacttech@gmail.com"
             className="quote-link"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -93,8 +95,10 @@ const Development = () => {
           </p>
           <p>React, Express.js, Node.js, MySQL & MongoDB</p>
           <a
-            href="/get-quote"
+            href="mailto:weacttech@gmail.com"
             className="quote-link"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
