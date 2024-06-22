@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  overflow-x: hidden;
 }
 
 .graphic-design {
