@@ -33,21 +33,21 @@ const Navbar = () => {
       <input type="checkbox" id="sidebar-active" />
 
       {/* Logo and open sidebar button */}
-      <h3 className="logo">
+      <div className="logo">
+        <label htmlFor="sidebar-active" className="open-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32"
+            viewBox="0 -960 960 960"
+            width="32"
+          >
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </label>
         <a href="/" style={{ textDecoration: "none", color: "black" }}>
           WeAct Tech
         </a>
-      </h3>
-      <label htmlFor="sidebar-active" className="open-sidebar-button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="32"
-          viewBox="0 -960 960 960"
-          width="32"
-        >
-          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-        </svg>
-      </label>
+      </div>
 
       {/* Overlay for sidebar */}
       <label htmlFor="sidebar-active" id="overlay"></label>

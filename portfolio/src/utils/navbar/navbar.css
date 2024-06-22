@@ -125,7 +125,42 @@ body {
 }
 
 /* Media query for responsive design */
+/* Centering the company name */
 @media (max-width: 768px) {
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo a {
+    margin-left: 10px;
+    font-size: 1.2rem; /* Adjust font size as needed */
+  }
+
+  .navbar-links-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+
+  .company-name {
+    display: none; /* Hide the centered company name */
+  }
+
+  .open-sidebar-button {
+    display: flex;
+    align-items: center;
+  }
+
+  /* The rest of your existing media query styles */
   .navbar-links-container {
     display: flex;
     flex-direction: column;
@@ -169,13 +204,6 @@ body {
     flex-direction: column;
   }
 
-  .navbar-links-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .open-sidebar-button,
   .close-sidebar-button {
     padding: 20px;
@@ -183,14 +211,6 @@ body {
     color: rgb(0, 0, 0);
     cursor: pointer;
     align-items: end;
-  }
-
-  .company-name {
-    display: block;
-  }
-
-  .logo {
-    display: none;
   }
 
   .close-sidebar-button {
@@ -278,14 +298,4 @@ body {
     margin-left: 30px;
     left: -3%;
   }
-}
-
-/* Overlay style */
-#overlay {
-  display: none;
-}
-
-/* Add a new class for moving items down */
-.move-down {
-  display: none;
 }
