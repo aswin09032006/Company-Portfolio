@@ -10,6 +10,7 @@ import Development from "./components/service/development/development";
 import Designing from "./components/service/graphicdesigning/designing";
 import Portfolio from "./components/portfolio/portfolio";
 import { IoCloudOffline } from "react-icons/io5";
+import Loader from "./utils/loader/loader";
 
 const App = () => {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -18,6 +19,7 @@ const App = () => {
     message:
       "It looks like you're not connected to the internet. Please check your connection and try again.",
   });
+  const [loading, setLoading] = useState(true); // State to manage page loading
 
   useEffect(() => {
     const handleOffline = () => {
@@ -50,10 +52,19 @@ const App = () => {
     }, 5000); // retry after 5 seconds
   };
 
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setLoading(false); // Simulate loading complete after 1.5 seconds
+    }, 2000);
+
+    return () => clearTimeout(delay);
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="App">
-        {!isOnline && (
+        {loading && <Loader />} {/* Display loader while loading */}
+        {!isOnline && !loading && (
           <div className="container">
             <IoCloudOffline style={{ fontSize: "10vh" }} />
             <h1 className="status">{offlineMessage.status}</h1>
@@ -63,8 +74,7 @@ const App = () => {
             </button>
           </div>
         )}
-
-        {isOnline && (
+        {isOnline && !loading && (
           <>
             <Navbar />
             <Routes>
