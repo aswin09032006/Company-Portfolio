@@ -12,20 +12,20 @@ import Portfolio from "./components/portfolio/portfolio";
 import { IoCloudOffline } from "react-icons/io5";
 
 const App = () => {
-  const [status, setStatus] = useState("");
-  const [message, setMessage] = useState("");
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const [offlineMessage, setOfflineMessage] = useState({
+    status: "Connection Lost",
+    message:
+      "It looks like you're not connected to the internet. Please check your connection and try again.",
+  });
 
   useEffect(() => {
     const handleOffline = () => {
-      setStatus("Connection Lost");
-      setMessage(
-        "It looks like you're not connected to the internet. Please check your connection and try again."
-      );
+      setIsOnline(false);
     };
 
     const handleOnline = () => {
-      setStatus("");
-      setMessage("");
+      setIsOnline(true);
     };
 
     // Check initial online status
@@ -43,22 +43,28 @@ const App = () => {
     };
   }, []);
 
+  const handleRetry = () => {
+    setIsOnline(false);
+    setTimeout(() => {
+      setIsOnline(navigator.onLine);
+    }, 5000); // retry after 5 seconds
+  };
+
   return (
     <BrowserRouter>
       <div className="App">
-        {status ? (
+        {!isOnline && (
           <div className="container">
             <IoCloudOffline style={{ fontSize: "10vh" }} />
-            <h1 className="status">{status}</h1>
-            <p className="message">{message}</p>
-            <p
-              className="retry-button"
-              onClick={() => window.location.reload()}
-            >
+            <h1 className="status">{offlineMessage.status}</h1>
+            <p className="message">{offlineMessage.message}</p>
+            <button className="retry-button" onClick={handleRetry}>
               Try Again
-            </p>
+            </button>
           </div>
-        ) : (
+        )}
+
+        {isOnline && (
           <>
             <Navbar />
             <Routes>
