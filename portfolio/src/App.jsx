@@ -55,7 +55,7 @@ const App = () => {
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoading(false); // Simulate loading complete after 1.5 seconds
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(delay);
   }, []);
