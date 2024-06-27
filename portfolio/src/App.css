@@ -1,18 +1,27 @@
+body {
+  cursor: url("/cursor1.png"), auto;
+}
 .container {
   text-align: center;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.status {
-  background-color: #f44336; /* Red */
-  color: white;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
+.status,
 .message {
-  background-color: #ff9800; /* Orange */
+  color: black;
+}
+
+.retry-button {
+  background: #000;
   color: white;
-  padding: 10px;
-  margin-bottom: 10px;
+  width: 30vw;
+  height: 3vh;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 30px;
 }

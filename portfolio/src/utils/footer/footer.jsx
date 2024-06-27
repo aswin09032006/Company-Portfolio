@@ -4,14 +4,16 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
+import logo from "/logo.png";
 
 const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-content-container">
         <div className="footer-content-header">
-          <a href="/" style={{ textDecoration: "none", color: "white" }}>
+          <a href="/" className="footer-content-header-link">
             WeAct Tech
+            <img src={logo} alt="" className="footer-logo-image" />
           </a>
         </div>
         <div className="footer-content-company">

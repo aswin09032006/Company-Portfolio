@@ -4,6 +4,7 @@ import { IoCallOutline } from "react-icons/io5";
 import ProgressBar from "../progressbar/progressbar";
 import { FaLaptopCode } from "react-icons/fa";
 import { PiPenNibLight } from "react-icons/pi";
+import logo from "/logo.png";
 
 const Navbar = () => {
   const [progress, setProgress] = useState(0);
@@ -44,7 +45,16 @@ const Navbar = () => {
             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
           </svg>
         </label>
-        <a href="/" style={{ textDecoration: "none", color: "black" }}>
+        <a
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <img src={logo} alt="" style={{ height: "35px", paddingTop: "3%" }} />
           WeAct Tech
         </a>
       </div>

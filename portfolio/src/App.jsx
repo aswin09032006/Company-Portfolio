@@ -9,7 +9,7 @@ import Footer from "./utils/footer/footer";
 import Development from "./components/service/development/development";
 import Designing from "./components/service/graphicdesigning/designing";
 import Portfolio from "./components/portfolio/portfolio";
-// import CustomCursorTrail from "./utils/customCursor/cursor";
+import { IoCloudOffline } from "react-icons/io5";
 
 const App = () => {
   const [status, setStatus] = useState("");
@@ -17,8 +17,15 @@ const App = () => {
 
   useEffect(() => {
     const handleOffline = () => {
-      setStatus("You are offline");
-      setMessage("Please check your internet connection");
+      setStatus("Connection Lost");
+      setMessage(
+        "It looks like you're not connected to the internet. Please check your connection and try again."
+      );
+    };
+
+    const handleOnline = () => {
+      setStatus("");
+      setMessage("");
     };
 
     // Check initial online status
@@ -26,27 +33,34 @@ const App = () => {
       handleOffline();
     }
 
-    // Listen for offline events
+    // Listen for online and offline events
     window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline);
 
     return () => {
       window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("online", handleOnline);
     };
   }, []);
 
   return (
     <BrowserRouter>
       <div className="App">
-        {status && (
+        {status ? (
           <div className="container">
-            <div className="status">{status}</div>
-            <div className="message">{message}</div>
+            <IoCloudOffline style={{ fontSize: "10vh" }} />
+            <h1 className="status">{status}</h1>
+            <p className="message">{message}</p>
+            <p
+              className="retry-button"
+              onClick={() => window.location.reload()}
+            >
+              Try Again
+            </p>
           </div>
-        )}
-        {status ? null : (
+        ) : (
           <>
             <Navbar />
-            {/* <CustomCursorTrail /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
