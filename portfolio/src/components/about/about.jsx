@@ -18,7 +18,7 @@ import htmlIcon from "../../assets/html.png";
 import cssIcon from "../../assets/css.png";
 import tailwindIcon from "../../assets/tailwind.png";
 import djangoIcon from "../../assets/django.png";
-
+import { BsLinkedin } from "react-icons/bs";
 const About = () => {
   const Card = ({ img, title }) => {
     return (
@@ -66,28 +66,46 @@ const About = () => {
         </div>
       </div>
       <div className="team-members-container">
-        <h1 className="team-members-title">
-          Meet the Minds Behind ~Company Name
-        </h1>
+        <h1 className="team-members-title">Meet the Minds Behind WeAct Tech</h1>
         <div className="team-member-image-container">
           <div className="tm-image-container">
             <img src={""} alt="" className="team-member-image" />
-            <h3>Aswin VK</h3>
+            <h3>
+              Aswin VK{" "}
+              <a href="https://www.linkedin.com/in/vkaswin/">
+                <BsLinkedin />
+              </a>
+            </h3>
             <p>Developer</p>
           </div>
           <div className="tm-image-container">
             <img src={""} alt="" className="team-member-image" />
-            <h3>Parthiban S</h3>
+            <h3>
+              Parthiban S{" "}
+              <a href="https://www.linkedin.com/in/parthiban18/">
+                <BsLinkedin />
+              </a>
+            </h3>
             <p>Developer</p>
           </div>
           <div className="tm-image-container">
             <img src={""} alt="" className="team-member-image" />
-            <h3>Aathini SS</h3>
+            <h3>
+              Aathini SS{" "}
+              <a href="https://www.linkedin.com/in/vkaswin/">
+                <BsLinkedin />
+              </a>
+            </h3>
             <p>UI/UX Designer</p>
           </div>
           <div className="tm-image-container">
             <img src={""} alt="" className="team-member-image" />
-            <h3>Manoj Aarya TSR</h3>
+            <h3>
+              Manoj Aarya TSR{" "}
+              <a href="https://www.linkedin.com/in/manojaarya-tsr-6120b8293/">
+                <BsLinkedin />
+              </a>
+            </h3>
             <p>Graphic Designer</p>
           </div>
         </div>

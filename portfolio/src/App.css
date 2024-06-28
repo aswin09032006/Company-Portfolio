@@ -25,3 +25,13 @@ body {
   padding: 15px 25px;
   margin-top: 30px;
 }
+
+.element-selector:focus {
+  outline: none !important;
+}
+
+/* Customize outline (optional) */
+.element-selector:focus {
+  outline: 2px solid transparent;
+  /* Replace #your-desired-color with the color you want */
+}
