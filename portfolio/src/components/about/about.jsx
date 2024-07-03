@@ -1,24 +1,21 @@
 import React from "react";
-import "./about.css";
-import tm1 from "../../assets/parthiban.png";
-import tm2 from "../../assets/bg.png";
-import tm3 from "../../assets/bg.png";
-import reactIcon from "../../assets/react.png";
-import jsIcon from "../../assets/js.png";
-import pythonIcon from "../../assets/python.png";
-import expressIcon from "../../assets/express.png";
-import mysqlIcon from "../../assets/mysql.png";
-import mongodbIcon from "../../assets/mongodb.png";
-import nodejsIcon from "../../assets/nodejs.png";
-import flutterIcon from "../../assets/flutter.png";
-import awsIcon from "../../assets/aws.png";
-import figmaIcon from "../../assets/figma.png";
-import bootstrapIcon from "../../assets/bootstrap.png";
-import htmlIcon from "../../assets/html.png";
-import cssIcon from "../../assets/css.png";
-import tailwindIcon from "../../assets/tailwind.png";
-import djangoIcon from "../../assets/django.png";
 import { BsLinkedin } from "react-icons/bs";
+import awsIcon from "../../assets/aws.png";
+import bootstrapIcon from "../../assets/bootstrap.png";
+import cssIcon from "../../assets/css.png";
+import djangoIcon from "../../assets/django.png";
+import expressIcon from "../../assets/express.png";
+import figmaIcon from "../../assets/figma.png";
+import flutterIcon from "../../assets/flutter.png";
+import htmlIcon from "../../assets/html.png";
+import jsIcon from "../../assets/js.png";
+import mongodbIcon from "../../assets/mongodb.png";
+import mysqlIcon from "../../assets/mysql.png";
+import nodejsIcon from "../../assets/nodejs.png";
+import pythonIcon from "../../assets/python.png";
+import reactIcon from "../../assets/react.png";
+import tailwindIcon from "../../assets/tailwind.png";
+import "./about.css";
 const About = () => {
   const Card = ({ img, title }) => {
     return (
@@ -92,7 +89,7 @@ const About = () => {
             <img src={""} alt="" className="team-member-image" />
             <h3>
               Aathini SS{" "}
-              <a href="https://www.linkedin.com/in/vkaswin/">
+              <a href="https://www.linkedin.com/in/aathini-sampathkumar-8183a3283/">
                 <BsLinkedin />
               </a>
             </h3>
