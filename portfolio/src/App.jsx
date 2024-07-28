@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { IoCloudOffline } from "react-icons/io5";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/home/home";
-import Navbar from "./utils/navbar/navbar";
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
-import Footer from "./utils/footer/footer";
+import Home from "./components/home/home";
+import Portfolio from "./components/portfolio/portfolio";
 import Development from "./components/service/development/development";
 import Designing from "./components/service/graphicdesigning/designing";
-import Portfolio from "./components/portfolio/portfolio";
-import { IoCloudOffline } from "react-icons/io5";
+import Footer from "./utils/footer/footer";
 import Loader from "./utils/loader/loader";
+import Navbar from "./utils/navbar/navbar";
 
 const App = () => {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
