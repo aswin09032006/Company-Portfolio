@@ -1,5 +1,7 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
+import aathini from "../../assets/aathini.png";
+import aswin from '../../assets/aswin.jpg';
 import awsIcon from "../../assets/aws.png";
 import bootstrapIcon from "../../assets/bootstrap.png";
 import cssIcon from "../../assets/css.png";
@@ -9,13 +11,16 @@ import figmaIcon from "../../assets/figma.png";
 import flutterIcon from "../../assets/flutter.png";
 import htmlIcon from "../../assets/html.png";
 import jsIcon from "../../assets/js.png";
+import manoj from "../../assets/manoj.jpeg";
 import mongodbIcon from "../../assets/mongodb.png";
 import mysqlIcon from "../../assets/mysql.png";
 import nodejsIcon from "../../assets/nodejs.png";
+import parthiban from "../../assets/parthiban.png";
 import pythonIcon from "../../assets/python.png";
 import reactIcon from "../../assets/react.png";
 import tailwindIcon from "../../assets/tailwind.png";
 import "./about.css";
+
 const About = () => {
   const Card = ({ img, title }) => {
     return (
@@ -65,18 +70,18 @@ const About = () => {
       <div className="team-members-container">
         <h1 className="team-members-title">Meet the Minds Behind WeAct Tech</h1>
         <div className="team-member-image-container">
-          <div className="tm-image-container">
-            <img src={""} alt="" className="team-member-image" />
+        <div className="tm-image-container">
+            <img src={aathini} alt="" className="team-member-image" />
             <h3>
-              Aswin VK{" "}
-              <a href="https://www.linkedin.com/in/vkaswin/">
+              Aathini SS{" "}
+              <a href="https://www.linkedin.com/in/aathini-sampathkumar-8183a3283/">
                 <BsLinkedin />
               </a>
             </h3>
-            <p>Developer</p>
-          </div>
-          <div className="tm-image-container">
-            <img src={""} alt="" className="team-member-image" />
+            <p>UI/UX Designer</p>
+          </div>         
+           <div className="tm-image-container">
+            <img src={parthiban} alt="" className="team-member-image" />
             <h3>
               Parthiban S{" "}
               <a href="https://www.linkedin.com/in/parthiban18/">
@@ -85,18 +90,21 @@ const About = () => {
             </h3>
             <p>Developer</p>
           </div>
+         
           <div className="tm-image-container">
-            <img src={""} alt="" className="team-member-image" />
+            <img src={aswin} alt="" className="team-member-image" />
             <h3>
-              Aathini SS{" "}
-              <a href="https://www.linkedin.com/in/aathini-sampathkumar-8183a3283/">
+              Aswin VK{" "}
+              <a href="https://www.linkedin.com/in/vkaswin/">
                 <BsLinkedin />
               </a>
             </h3>
-            <p>UI/UX Designer</p>
+            <p>Developer</p>
           </div>
+
+          
           <div className="tm-image-container">
-            <img src={""} alt="" className="team-member-image" />
+            <img src={manoj} alt="" className="team-member-image" />
             <h3>
               Manoj Aarya TSR{" "}
               <a href="https://www.linkedin.com/in/manojaarya-tsr-6120b8293/">
